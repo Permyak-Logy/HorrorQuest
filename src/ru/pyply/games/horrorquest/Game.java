@@ -19,7 +19,7 @@ public class Game {
                 player.addKnowledge(story.current_situation.dk);
             }
 
-            System.out.println("=============" + "ХП: " + player.health + " Знания: " + player.knowledge + "%" +
+            System.out.println("=============" + "ХП: " + player.getHealth() + " Знания: " + player.getKnowledge() + "%" +
                     "=============");
             System.out.println("============="
                     + story.current_situation.subject + "==============");
@@ -30,9 +30,9 @@ public class Game {
             story.go(in.nextInt());
         }
 
-        if (player.health <= 0)
+        if (player.getHealth() <= 0)
             System.out.println("Вы умерли!");
-         else if (player.knowledge <= 100) {
+         else if (player.getKnowledge() <= 100) {
             System.out.println(player.name + ", Вы живы, но расследование не завершенно, а убийства не закончились.");
         } else {
             System.out.println(player.name + ", Вы нашли все улики и раскрыли дело! Маньяком был уборщик этого дома." +

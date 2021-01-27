@@ -2,8 +2,8 @@ package ru.pyply.games.horrorquest;
 
 
 public class Character {
-    public int health;
-    public int knowledge;
+    private int health;
+    private int knowledge;
     public String name;
 
     public Character(String name) {
@@ -16,5 +16,12 @@ public class Character {
     }
     public void addKnowledge(int value) {
         this.knowledge += value;
+    }
+
+    public int getHealth() {
+        return this.health;
+    }
+    public int getKnowledge() {
+        return this.knowledge;
     }
 }
